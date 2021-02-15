@@ -1,0 +1,45 @@
+h2 {
+    margin-bottom: 100px;
+    
+}  
+table {
+    position: relative;
+}
+
+th {
+    padding-left: 3.2px;
+}
+
+td {
+    border: 1px solid black;
+}
+
+
+#shops > table > tr:nth-of-type(1) {
+    position: absolute;
+    left:52px;
+    top: -55px;
+    padding-left: 1px;
+
+}
+
+#shops > table > tr > td:not(:first-child) {
+    position: relative;
+    left:4px;
+    color:black;
+    padding-left: 30px;
+    padding-top: 5px;
+
+}
+
+
+#shops > table > tr > td:nth-of-type(16) {
+    color:red;
+}
+
+#shops > table > tr:last-child > td:nth-of-type(16) {
+    font-weight: 700;
+    font-size: 18px;
+
+}
+
