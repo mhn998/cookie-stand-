@@ -1,0 +1,20 @@
+a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    left:250px;
+    background: rgb(128, 108, 108);
+    width:50%;
+}
+
+ul {
+list-style-type: none ;
+}
+
+body{
+margin: 30 auto;
+text-align: center;
+background-color: black;
+color:wheat;
+}

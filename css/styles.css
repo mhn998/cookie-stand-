@@ -23,6 +23,10 @@ td {
 
 }
 
+#shops {
+    margin-top: 200px;
+}
+
 #shops > table > tr > td:not(:first-child) {
     position: relative;
     left:4px;
@@ -43,3 +47,22 @@ td {
 
 }
 
+nav ul li a {
+    display: block;
+    position: absolute;
+    top:80px;
+    margin:0;
+    text-decoration: none;
+    color:white;
+    background-color: black ;
+    font-size: 1.5em;
+}
+
+header{
+    background-color: gray;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+}
