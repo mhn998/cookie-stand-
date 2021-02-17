@@ -2,6 +2,9 @@
 
 ## Synopsis 
 
+Create many shops with a constructor function and fill their random data in a table , then apply a form with required data to add new shops to the table.
+
+Object Constructor, Events , forms & tables included! 
 
 ## Code Examples 
 

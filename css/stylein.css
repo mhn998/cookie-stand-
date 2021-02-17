@@ -1,20 +1,54 @@
 a {
-    display: block;
     text-decoration: none;
-    color: white;
-    position: relative;
-    left:250px;
-    background: rgb(128, 108, 108);
+    color: black;
     width:50%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 500;
+    font-size: 1.2em;
 }
 
+a:hover {
+    font-size: 20px ;
+    color:cadetblue;
+}
+
+header{
+    background-color:black;
+    margin-bottom: 30px;
+}
 ul {
 list-style-type: none ;
+background-color: ghostwhite;
+padding: 20px;
 }
 
 body{
 margin: 30 auto;
-text-align: center;
-background-color: black;
 color:wheat;
+}
+
+main {
+    background-color: black;
+    text-align: center;
+}
+
+.our-products {
+    display:flex;
+    flex-wrap: wrap;
+    /* grid-template-rows: 1fr 1fr; */
+}
+
+.our-products img {
+    width: 300px;
+    flex: 1 1 50px;
+}
+
+h3 {
+    font-size: 1.5em;
+
+}
+
+h2 {
+    padding-top: 10px;
+    text-align: center;
 }

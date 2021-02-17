@@ -1,9 +1,11 @@
 
+'use strict'
+
 let hours = ["6:00am","7:00am","8:00am","9:00am", "10:00am", "11:00am", "12:00pm", "1:00pm" , "2:00pm" , "3:00pm" , "4:00pm" , "5:00pm" , "6:00pm", "7:00pm"]
 
 
 // The constructor function template
-function Shop (name,minCust,maxCust,AvgCookieperCust,CustperHour,AvgCookieperHourArr) {
+function Shop (name,minCust,maxCust,AvgCookieperCust) {
     this.name = name;
     this.minCust = minCust;
     this.maxCust=maxCust;
@@ -89,11 +91,11 @@ function randomCustomerNumber(min,max) {
 
 
 // Define Shops & fill the object template
-let seattle = new Shop ("Seattle",23,65,6.3,[],[]);
-let tokyo = new Shop ("Tokyo",3,24,1.2,[],[])
-let dubai = new Shop ("Dubai",11,38,3.7,[],[])
-let paris = new Shop ("Paris",20,38,2.3,[],[])
-let lima = new Shop ("Lima",2,16,4.6,[],[])
+let seattle = new Shop ("Seattle",23,65,6.3);
+let tokyo = new Shop ("Tokyo",3,24,1.2)
+let dubai = new Shop ("Dubai",11,38,3.7)
+let paris = new Shop ("Paris",20,38,2.3)
+let lima = new Shop ("Lima",2,16,4.6)
 
 let allShops = [seattle,tokyo,dubai,paris,lima]
 
@@ -112,7 +114,7 @@ Shops.appendChild(table)
 
 // Heading function 
 function rowHeading() {
-    tr1st = document.createElement("tr")
+   let tr1st = document.createElement("tr")
 table.appendChild(tr1st)
 
 let tableHeading;
@@ -140,14 +142,15 @@ for (let i=0;i<allShops.length;i++) {
 
 
 //footer function
-
-function footerHeading() {
-let lastTr = document.createElement("tr")
-table.appendChild(lastTr)
-
 let dataTotal;
 let grandData;
 let grandTotal = 0;
+let lastTr;
+function footerHeading() {
+lastTr = document.createElement("tr")
+table.appendChild(lastTr)
+
+
 dataTotal = document.createElement("td")
 lastTr.appendChild(dataTotal)
 dataTotal.innerText = "Totals" 
@@ -173,11 +176,50 @@ grandData =document.createElement("td")
 lastTr.appendChild(grandData)
 grandData.textContent = grandTotal;
 // dataTotal.textContent = grandTotal;
-
+    return dataTotal
 
 }
 
 footerHeading();
+
+// Lab Forms& Events
+
+let neWshops = document.getElementById('ShopsForm')
+
+neWshops.addEventListener('submit',submitter)
+
+
+function submitter(event) {
+    event.preventDefault();
+    let newName = event.target.ShopName.value;
+    let mincustomer = event.target.minCust.value;
+    let maxcustomer = event.target.maxCust.value;
+    let avgCookiepercustomer = event.target.AvgCookie.value;
+    // validation the form fields
+
+    if ((newName=="")|| !isNaN(newName)){
+        alert("please insert valid name for the shop")   
+
+    } else if((isNaN(mincustomer) || mincustomer=="")||(isNaN(maxcustomer) || maxcustomer=="")||(isNaN(avgCookiepercustomer) || avgCookiepercustomer=="")) {
+        alert("please insert valid numbers")
+        
+    } else if (Number(mincustomer)>Number(maxcustomer)) {
+        alert("please make sure that the max is higher than min")
+    } else {
+        console.log(allShops);
+        let theNewshop = new Shop (newName,mincustomer,maxcustomer,avgCookiepercustomer)
+        allShops.push(theNewshop);
+        theNewshop.CallEverything();
+        lastTr.remove();
+        grandTotal = 0;
+        theNewshop.render();
+        footerHeading();
+        neWshops.reset();
+    }
+    
+}
+// newName == null || newName==""
+   
 
 
 // End

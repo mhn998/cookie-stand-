@@ -11,23 +11,44 @@
 
     <header>
         <h2>Cookie Salmon Sales</h2>
+        <nav>
+            <ul>
+                <li>
+                    <a href="../index.html">Home Page</a>
+                </li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li>
-                <a href="../index.html">Home Page</a>
-            </li>
-        </ul>
-    </nav>
+
     <main>
+        <form action="" id="ShopsForm">
+            <div class="textfield">
+                Please Fill the form in order to add your Shop to the sales list
+            </div>
+            <fieldset>
+                <label for="ShopName">New Shop Name</label>
+                <input type="text" id="ShopName" name="ShopName">
+                <br>
+                <label for="minCust">Minimun Customers</label>
+                <input type="text" id="minCust" name="minCust">
+                <br>
+                <label for="maxCust"> Max Customers</label>
+                <input type="text" id="maxCust" name="maxCust">
+                <br>
+                <label for="AvgCookie">Avg Cookies per customer</label>
+                <input type="text" id="AvgCookie" name="AvgCookie">
+                <br>
+                <input type="submit" value="Submit">
+
+            </fieldset>
+
+
+        </form>
+
         <div id="shops">
 
+        </div>
     </main>
-    
-       
-
-
-    </div>
     
     <script src="../js/app.js"></script>
 </body>
