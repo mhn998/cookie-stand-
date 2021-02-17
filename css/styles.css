@@ -17,8 +17,14 @@ nav ul li a {
     font-weight: 500;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+nav ul li a:hover {
+    font-size: 20px ;
+    color:cadetblue;
+}
 nav ul {
     background-color: ghostwhite;
+    padding:20px;
 }
 
 
@@ -124,4 +130,9 @@ input[type="submit"] {
     font-family: 'Courier New', Courier, monospace;
     font-weight: 600;
     line-height: 1.5;
+}
+
+td:hover {
+    font-size: 20px;
+    color:gray;
 }
