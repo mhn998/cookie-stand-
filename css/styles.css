@@ -1,7 +1,27 @@
+body {
+    margin: 0 auto;
+}
+header{
+    background-color:black;
+    margin-bottom: 20px;
+    color:white
+}
+
 h2 {
-    margin-bottom: 100px;
-    
-}  
+    padding: 10px 10px;
+    text-align: center;
+}
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+nav ul {
+    background-color: ghostwhite;
+}
+
+
 table {
     position: relative;
 }
@@ -24,7 +44,8 @@ td {
 }
 
 #shops {
-    margin-top: 200px;
+    margin-top: 100px;
+    margin-left: 20px;
 }
 
 #shops > table > tr > td:not(:first-child) {
@@ -47,7 +68,7 @@ td {
 
 }
 
-nav ul li a {
+/* nav ul li a {
     display: block;
     position: absolute;
     top:80px;
@@ -56,13 +77,51 @@ nav ul li a {
     color:white;
     background-color: black ;
     font-size: 1.5em;
-}
+} */
 
-header{
-    background-color: gray;
-    text-align: center;
-}
 
 nav ul {
     list-style-type: none;
+}
+
+label {
+    padding-right: 10px;
+    padding-bottom: 20px;
+}
+
+input {
+    padding: 5px;
+    margin:10px;
+    text-align: center;
+}
+
+form {
+    margin-left:20px ;
+    width:50%;
+    background-color: black;
+    color:blanchedalmond;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    border: none;
+    /* grid-template-rows: 1fr; */
+}
+
+input[type="submit"] {
+    background-color: white;
+    border-radius: 3px;
+    border : 1px solid black;
+    color:black;
+    padding: 10px;
+    cursor: pointer;
+
+}
+
+.textfield {
+    text-align: center;
+    align-content: center;
+    padding: 70px 20px ;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    line-height: 1.5;
 }
