@@ -39,7 +39,6 @@ main {
 .our-products {
     display:flex;
     flex-wrap: wrap;
-    /* grid-template-rows: 1fr 1fr; */
 }
 
 .our-products img {
