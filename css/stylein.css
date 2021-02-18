@@ -30,8 +30,12 @@ color:wheat;
 main {
     background-color: black;
     text-align: center;
+    font-family: Arial;
 }
 
+.Contact {
+    padding-bottom:50px;
+}
 .our-products {
     display:flex;
     flex-wrap: wrap;
@@ -51,4 +55,14 @@ h3 {
 h2 {
     padding-top: 10px;
     text-align: center;
+    font-family: 'Zilla Slab Highlight', cursive;
+    font-size:2em;
+}
+
+.about-business {
+    padding:50px;
+    width:800px;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
